@@ -1,5 +1,7 @@
 import extensions.Opx;
+import extensions.Romx;
 import functions.Operation;
+import functions.RomanConvert;
 
 public class driver {
     public static void main(String[] args) {
@@ -16,5 +18,11 @@ public class driver {
                 .pipe(Operation::minus, 1240);
 
         System.out.println(o.getResult());
+
+        for(int i = 0; i < 50; i++) {
+
+        }
+        System.out.println(RomanConvert.decimal(39));
+
     }
 }
