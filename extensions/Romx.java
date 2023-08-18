@@ -21,34 +21,8 @@ public class Romx {
     }
 
     public Romx pipe(String a, String b) {
-        String n = "";
-        int len = a.length();
-
-        System.out.println("Get result "+result);
-
-        if (result.equals(a)) return new Romx(n.concat(b));
-
-        int i;
-        for (i = 0; i <= result.length()-len; i += len){
-            String sub = result.substring(i, i+len);
-            if (sub.equals(a)) n = n.concat(b);
-            else n = n.concat(sub);
-//            System.out.println(n);
-        }
-
-        return new Romx(n.concat(result.substring(i)));
-    }
-
-    public Romx pipeEnd(String a, String b) {
-        String n = "";
-        int len = a.length();
-        int cut = result.length() > len? result.length() - len : 0;
-
-        System.out.println("Get result "+result);
-
-        String sub = result.substring(cut);
-        if (sub.equals(a)) return new Romx(result.substring(0, cut).concat(b));
-        return new Romx(result);
+        String n = result.replace(a, b);
+        return new Romx(n);
     }
 
     public String getResult() {

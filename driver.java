@@ -19,10 +19,6 @@ public class driver {
 
         System.out.println(o.getResult());
 
-        for(int i = 0; i < 50; i++) {
-
-        }
-        System.out.println(RomanConvert.decimal(39));
-
+        System.out.println(RomanConvert.decimal(494));
     }
 }
